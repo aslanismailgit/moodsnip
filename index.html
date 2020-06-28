@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+  <title>How do I feel like?</title>
+
+</head>
+
+<body>
+  <header id="main-header" class="bg-success text-white mb-5">
+ <!-- <header id="main-header" class="d-flex justify-content-center"> -->
+  </header>
+  <div class="container justify-content-center" style="width: 680px";>
+   <div id="main" class="card card-body">
+      <h2 class="alert alert-primary text-center">How do I feel like today?</h2>
+
+      <h3 class="alert alert-danger text-center">Select a word</h3>
+      <button id="start_button" type="button" class="btn btn-outline-primary btn-lg btn-block">Start</button>
+      <br>
+      <canvas id="canvas_progress" class="justify-content-center" width="600" height="30"></canvas>
+      <br>
+      <div class="btn-group-vertical">
+        <button id="word_button_1" type="button" class="btn btn-outline-success btn-lg btn-block">----</button>
+        <br>
+        <button id="word_button_2" type="button" class="btn btn-outline-success btn-lg btn-block">----</button>
+        <br>
+        <button id="word_button_3" type="button" class="btn btn-outline-success btn-lg btn-block">----</button>
+        <br>
+        <button id="word_button_4" type="button" class="btn btn-outline-success btn-lg btn-block">----</button>
+      </div>
+
+
+   </div>
+   <br>
+   <div id="results" class="card card-body">
+      <h2 class="alert alert-primary text-center">Here are the results</h2>
+      <br>
+      <button id="playAgain" type="button" class="btn btn-outline-danger btn-lg btn-block">Restart</button>
+      <br>
+      <canvas id="canvas" class="justify-content-center" width="600" height="400"></canvas>
+
+      <!-- <img src="/Users/ismailaslan/Desktop/Screenshot 2020-06-24 at 17.18.17.png" alt="" id="source" /> -->
+   </div>
+
+  <p style="text-align:justify">The algorithm behind this application is based on
+    <a href="https://www.tensorflow.org/">Tensorflow</a>'s
+    <a href="https://tfhub.dev/google/universal-sentence-encoder/4">Universal Sentence Encoder</a>
+    which encodes text into high-dimensional vectors that can be used for text classification,
+    semantic similarity, clustering and other natural language tasks.
+    To get more insight into word similarities visit
+    <a href="http://projector.tensorflow.org/"> Embedding Projector</a>.
+    To understand the mechanism behind this application you can read
+    <a href="link"> this blog</a>.
+  </p>
+</div>
+
+  <script type='text/javascript' src="scores_9679_tokens.js"></script>
+  <script src="dom.js"></script>
+  <script src="face.js"></script>
+  <script src="animation.js"></script>
+  <script src="progress.js"></script>
+
+
+
+
+
+
+</body>
+</html>
