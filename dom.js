@@ -102,7 +102,7 @@ function showResults(){
   }
 
   // std = 1 so 3*std for each score
-  target = (totalPositiveScore - totalNegativeScore)/numberOfIter + (2 * 4)
+  target = (totalPositiveScore - totalNegativeScore)/numberOfIter + (2 * 3)
   if (target<0) {target=0}
   if (target>10) {target=10}
   console.log("target = ", target);
