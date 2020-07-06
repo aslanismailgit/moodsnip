@@ -46,7 +46,7 @@ function randomInteger(min, max) {
 }
 
 var randomWordsIndex = []
-numberOfIter = 10
+numberOfIter = 3
 var index_ary = new Uint8Array(numberOfIter*4);
 
 min = 0; // min-max included
@@ -100,8 +100,7 @@ function showResults(){
       console.log("totalNegativeScore",totalNegativeScore);
     }
   }
-
-  // std = 1 so 3*std for each score
+  // std = 1 so 3*std for each score  to scale values bigger than 0
   target = (totalPositiveScore - totalNegativeScore)/numberOfIter + (2 * 3)
   if (target<0) {target=0}
   if (target>10) {target=10}

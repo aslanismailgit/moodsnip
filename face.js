@@ -50,12 +50,14 @@ function neutralFace(){
   ctx.arc(eyeX, eyeY, eyeRadius, 0, 2 * Math.PI, false);
   ctx.fillStyle = 'black';
   ctx.fill();
-  // draw the mouth
+  //* draw the mouth
   ctx.beginPath();
   ctx.moveTo(centerX-30, centerY+20);
   ctx.lineTo(centerX+30, centerY+20);
   ctx.stroke();
 }
+
+
 function negativeFace(){
   var centerX = 40+radius;
 

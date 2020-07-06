@@ -11,7 +11,7 @@ function drawRectangleProgress() {
   // for (var i = 0; i < numberOfIter; i++) {
     ctxProgress.beginPath()
     ctxProgress.lineWidth = "10";
-    ctxProgress.strokeStyle = "white"
+    ctxProgress.strokeStyle = "#e6ffff"
     ctxProgress.rect(start*wid, 1 ,wid, cph-5)
     ctxProgress.stroke()
 
