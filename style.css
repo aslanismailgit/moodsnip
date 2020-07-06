@@ -1,0 +1,51 @@
+
+html {
+  background-color: white;
+}
+
+#start_button {
+  background-color: #ffa500;
+  font-size: 40px;
+  color: black;
+  border-radius: 30px
+}
+button.btn {
+  background-color: #ffe474;
+  color:#fff;
+  margin: 5px 0px;
+  font-size: 40px;
+  color: black;
+  border-radius: 30px
+}
+
+button.btn:hover
+{
+  background: #ffe474;
+  color:black;
+  box-shadow: 3px 3px 6px #999;
+}
+
+h2.alert {
+  font-size: 40px;
+  border-radius: 30px;
+}
+h3.alert {
+  font-size: 40px;
+  border-radius: 30px;
+}
+div.container {
+  background: white;
+}
+div.card {
+  margin: 20px 10px;
+  background: #e6ffff;//fff0e6;
+  border-radius: 30px
+}
+
+p {
+  padding: 10px 10px;
+  text-align: justify;
+  margin: 20px 10px;
+  background: #fff0e6;
+  border-radius: 30px
+}
