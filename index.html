@@ -3,11 +3,18 @@
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
   <title>How do I feel like?</title>
+  <style>
+
+  #word_button_1 {
+    font-size: 40;
+    background-color: "red"
+  }
+  </style>
 
 </head>
 
@@ -25,7 +32,10 @@
       <canvas id="canvas_progress" class="justify-content-center" width="600" height="30"></canvas>
       <br>
       <div class="btn-group-vertical">
-        <button id="word_button_1" type="button" class="btn btn-outline-success btn-lg btn-block">----</button>
+        <button id="word_button_1" type="button"
+        style: font-size 40 background-color "red"
+
+        class="btn btn-outline-success btn-lg btn-block">----</button>
         <br>
         <button id="word_button_2" type="button" class="btn btn-outline-success btn-lg btn-block">----</button>
         <br>
@@ -42,7 +52,7 @@
       <br>
       <button id="playAgain" type="button" class="btn btn-outline-danger btn-lg btn-block">Restart</button>
       <br>
-      <canvas id="canvas" class="justify-content-center" width="600" height="400"></canvas>
+      <canvas id="canvas" class="justify-content-center" width="600px" height="400px"></canvas>
 
       <!-- <img src="/Users/ismailaslan/Desktop/Screenshot 2020-06-24 at 17.18.17.png" alt="" id="source" /> -->
    </div>
@@ -64,11 +74,6 @@
   <script src="face.js"></script>
   <script src="animation.js"></script>
   <script src="progress.js"></script>
-
-
-
-
-
 
 </body>
 </html>
