@@ -7,7 +7,6 @@ results.style.display = "none";
 var results_chart = document.getElementById("results_chart");
 results_chart.style.display = "none";
 var chartElem = document.getElementById("container_chart");
-console.log(chartElem.dataset.value);
 
 /*-------------------------------------------------*/
 
@@ -19,15 +18,21 @@ play_Again.addEventListener('click', playAgain);
 
 var button1 = document.getElementById("word_button_1");
 button1.addEventListener('click', runSelectWord_1);
+button1.disabled = true
 
 var button2 = document.getElementById("word_button_2");
 button2.addEventListener('click', runSelectWord_2);
+button2.disabled = true
 
 var button3 = document.getElementById("word_button_3");
 button3.addEventListener('click', runSelectWord_3);
+button3.disabled = true
 
 var button4 = document.getElementById("word_button_4");
 button4.addEventListener('click', runSelectWord_4);
+button4.disabled = true
+
+
 
 var start = 0
 var text1 = ""
@@ -71,6 +76,12 @@ function assign_words(){
     button2.innerText = text2
     button3.innerText = text3
     button4.innerText = text4
+
+    button1.disabled = false
+    button2.disabled = false
+    button3.disabled = false
+    button4.disabled = false
+
     drawRectangleProgress()
 
   }
@@ -136,11 +147,10 @@ function playAgain() {
 /*-------------------------------------------------*/
 function runSelectWord_1(e){
   e.preventDefault();
-
+  console.log(start);
   index_temp = 0
   index_ary[index_temp + ((start-1) * 4)] = 1
   assign_words()
-
   start++
 }
 
