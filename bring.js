@@ -1,3 +1,6 @@
+var pics_div = document.getElementById("pics");
+pics_div.style.display = "none";
+
 var pics_button = document.getElementById("seePics");
 pics_button.addEventListener('click', bringPics);
 

@@ -9,22 +9,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
   <title>How do I feel like?</title>
-  <!--style>
-
-  #word_button_1 {
-    font-size: 40;
-    background-color: "red"
-  }
-  </style-->
 
 </head>
 
 <body>
   <header id="main-header" class="bg-success text-white mb-5">
- <!-- <header id="main-header" class="d-flex justify-content-center"> -->
   </header>
   <div class="container justify-content-center" style="width: 640px";>
-   <div id="main" class="card card-body">
+    <div id="main" class="card card-body">
       <h2 class="alert alert-primary text-center">How do I feel like today?</h2>
 
       <h3 class="alert alert-danger text-center">Select a word</h3>
@@ -46,51 +38,48 @@
       </div>
 
 
-   </div>
-   <br>
-   <div id="results" class="card card-body">
+    </div>
+    <br>
+    <div id="results" class="card card-body">
       <h2 class="alert alert-primary text-center">Here are the results</h2>
       <br>
       <button id="playAgain" type="button" class="btn btn-outline-danger btn-lg btn-block">Restart</button>
       <br>
-   </div>
-   <div id="results_chart" class="card card-body">
+    </div>
+    <div id="results_chart" class="card card-body">
+      <h2 class="alert alert-primary text-center">You are </h2>
       <div class="wrapper">
-       <div id="container_chart"  class="container chart" data-size="400" data-value="88" data-arrow="down"></div>
+        <div id="container_chart"  class="container chart" data-size="400" data-value="88" data-arrow="down"></div>
       </div>
-   </div>
+      <br>
+      <h2 class="alert alert-primary text-center">positive</h2>
+    </div>
 
-  <p style="text-align:justify">The algorithm behind this application is based on
-    <a href="https://www.tensorflow.org/">Tensorflow</a>'s
-    <a href="https://tfhub.dev/google/universal-sentence-encoder/4">Universal Sentence Encoder</a>
-    which encodes text into high-dimensional vectors that can be used for text classification,
-    semantic similarity, clustering and other natural language tasks.
-    To get more insight into word similarities visit
-    <a href="http://projector.tensorflow.org/"> Embedding Projector</a>.
-    To understand the mechanism behind this application you can read
-    <a href="link"> this blog</a>. Artificial intelligence is behind!
-  </p>
+    <p style="text-align:justify">The algorithm behind this application is based on
+      <a href="https://www.tensorflow.org/">Tensorflow</a>'s
+      <a href="https://tfhub.dev/google/universal-sentence-encoder/4">Universal Sentence Encoder</a>
+      which encodes text into high-dimensional vectors that can be used for text classification,
+      semantic similarity, clustering and other natural language tasks.
+      To get more insight into word similarities visit
+      <a href="http://projector.tensorflow.org/"> Embedding Projector</a>.
+      To understand the mechanism behind this application you can read
+      <a href="link"> this blog</a>. Artificial Intelligence is behind!
+    </p>
 
 
-  <div id="pics" class="card card-body" style="width: 600px";>
-    <!--h2 class="alert alert-primary text-center">Try this one !!!</h2-->
-    <button id="seePics" type="button" class="btn btn-outline-danger btn-lg btn-block">A pic can make you happy!!</button>
-    <img id="img" src="">
-    <button id="readQuotes" type="button" class="btn btn-outline-danger btn-lg btn-block">A quote can make you happy!!</button>
-    <button id="readJokes" type="button" class="btn btn-outline-danger btn-lg btn-block">A joke can make you happy!!</button>
-
-    <!--img id="img" src="https://source.unsplash.com/1600x900/?happy">
-    <img id="img" src="https://source.unsplash.com/1600x900/?happiness"-->
+    <div id="pics" class="card card-body" style="width: 600px";>
+      <button id="seePics" type="button" class="btn btn-outline-danger btn-lg btn-block">Try a pic!</button>
+      <img id="img" src="">
+      <!--button id="readQuotes" type="button" class="btn btn-outline-danger btn-lg btn-block">Try a quote!</button>
+      <button id="readJokes" type="button" class="btn btn-outline-danger btn-lg btn-block">Try a joke!</button-->
+    </div>
   </div>
-</div>
 
   <script type='text/javascript' src="scores_9679_tokens.js"></script>
   <script src="dom.js"></script>
   <script src="progress.js"></script>
   <script src="circular.js"></script>
   <script src="bring.js"></script>
-
-
 
 </body>
 </html>

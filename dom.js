@@ -6,6 +6,7 @@ var results = document.getElementById("results");
 results.style.display = "none";
 var results_chart = document.getElementById("results_chart");
 results_chart.style.display = "none";
+
 var chartElem = document.getElementById("container_chart");
 
 /*-------------------------------------------------*/
@@ -99,6 +100,8 @@ function showResults(){
   // results.style.visibility = "visible";
   results.style.display = "block";
   results_chart.style.display = "block";
+  pics_div.style.display = "block";
+
   results.scrollIntoView();
   for (var i = 0; i < index_ary.length; i++) {
     if (index_ary[i]==1) {
