@@ -53,7 +53,7 @@ function randomInteger(min, max) {
 }
 
 var randomWordsIndex = []
-numberOfIter = 3
+numberOfIter = 10
 var index_ary = new Uint8Array(numberOfIter*4);
 
 min = 0; // min-max included
