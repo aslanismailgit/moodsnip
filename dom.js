@@ -27,8 +27,8 @@ if (language=="en") {
 }
 
 function change2turkish(){
-  Howd.innerText = "Bugün Nasılsın"
-  SelectW.innerText = "Bir kelime seç"
+  Howd.innerText = "Acaba Bugün Nasılım"
+  SelectW.innerText = "Bir kelime seç ve gör"
   start_button.innerText = "Başla"
   play_Again.innerText = "Yeniden Başla"
   Here.innerText = "İşte sonuçlar"
