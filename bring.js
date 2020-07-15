@@ -2,7 +2,7 @@ var pics_div = document.getElementById("pics");
 pics_div.style.display = "none";
 
 var pics_button = document.getElementById("seePics");
-pics_button.addEventListener('click', bringPics);
+//pics_button.addEventListener('click', bringPics);
 
 var pics_Src = document.getElementById("img");
 

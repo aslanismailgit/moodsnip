@@ -1,4 +1,44 @@
 
+var lang = window.navigator.userLanguage || window.navigator.language;
+var language = lang.substring(0, 2);
+
+var Howd = document.getElementById("Howd");
+var SelectW = document.getElementById("SelectW");
+var Here = document.getElementById("Here");
+var YouAre = document.getElementById("YouAre");
+var posit = document.getElementById("posit");
+
+
+var start_button = document.getElementById("start_button");
+start_button.addEventListener('click', start_words);
+
+var play_Again = document.getElementById("playAgain");
+play_Again.addEventListener('click', playAgain);
+
+
+if (language=="tr") {
+  console.log("türkçe");
+  data = data_tr;
+  change2turkish()
+}
+if (language=="en") {
+  console.log("english");
+  data = data_en
+}
+
+function change2turkish(){
+  Howd.innerText = "Bugün Nasılsın"
+  SelectW.innerText = "Bir kelime seç"
+  start_button.innerText = "Başla"
+  play_Again.innerText = "Yeniden Başla"
+  Here.innerText = "İşte sonuçlar"
+  YouAre.innerText = "Bugün"
+  posit.innerText = "pozitifsiniz"
+  console.log("changed to turkish");
+}
+
+ //works IE/SAFARI/CHROME/FF
+
 var lengthOfDictionary = data.length
 // console.log("Length of dictionary = ", lengthOfDictionary);
 
@@ -11,11 +51,6 @@ var chartElem = document.getElementById("container_chart");
 
 /*-------------------------------------------------*/
 
-var start_button = document.getElementById("start_button");
-start_button.addEventListener('click', start_words);
-
-var play_Again = document.getElementById("playAgain");
-play_Again.addEventListener('click', playAgain);
 
 var button1 = document.getElementById("word_button_1");
 button1.addEventListener('click', runSelectWord_1);
@@ -32,6 +67,7 @@ button3.disabled = true
 var button4 = document.getElementById("word_button_4");
 button4.addEventListener('click', runSelectWord_4);
 button4.disabled = true
+
 
 
 
@@ -73,10 +109,10 @@ function assign_words(){
     text2 = data[randomWordsIndex[1 + start * 4]]["Word"] //+ "--" + start
     text3 = data[randomWordsIndex[2 + start * 4]]["Word"] //+ "--" + start
     text4 = data[randomWordsIndex[3 + start * 4]]["Word"] //+ "--" + start
-    button1.innerText = text1
-    button2.innerText = text2
-    button3.innerText = text3
-    button4.innerText = text4
+    button1.innerText = text1.toLowerCase();
+    button2.innerText = text2.toLowerCase();
+    button3.innerText = text3.toLowerCase();
+    button4.innerText = text4.toLowerCase();
 
     button1.disabled = false
     button2.disabled = false
@@ -100,7 +136,7 @@ function showResults(){
   // results.style.visibility = "visible";
   results.style.display = "block";
   results_chart.style.display = "block";
-  pics_div.style.display = "block";
+  //pics_div.style.display = "block";
 
   results.scrollIntoView();
   for (var i = 0; i < index_ary.length; i++) {
@@ -109,20 +145,26 @@ function showResults(){
       totalPositiveScore = totalPositiveScore + data[randomWordsIndex[i]]["positiveScore"]
       totalNegativeScore = totalNegativeScore + data[randomWordsIndex[i]]["negativeScore"]
 
-      // console.log("PositiveScore", data[randomWordsIndex[i]]["positiveScore"]);
-      // console.log("NegativeScore", data[randomWordsIndex[i]]["negativeScore"]);
+      console.log("PositiveScore", data[randomWordsIndex[i]]["Word"]);
+      console.log("PositiveScore", data[randomWordsIndex[i]]["positiveScore"]);
+      console.log("NegativeScore", data[randomWordsIndex[i]]["negativeScore"]);
 
-      console.log("totalPositiveScore",totalPositiveScore);
-      console.log("totalNegativeScore",totalNegativeScore);
+      //console.log("totalPositiveScore",totalPositiveScore);
+      //console.log("totalNegativeScore",totalNegativeScore);
     }
   }
-  // std = 1 so 3*std for each score  to scale values bigger than 0
-  target = (totalPositiveScore - totalNegativeScore)/numberOfIter + (2 * 3)
-  if (target<0) {target=0}
-  if (target>10) {target=10}
+  target = (totalPositiveScore - totalNegativeScore)/numberOfIter
 
-  chartElem.dataset.value = target*10
   console.log("target = ", target);
+  /* std = 1 so 3*std for each score  to move values beyond 0
+  target = (target) + (2 * 3*0.7) */
+
+  target = ((Math.tanh(target))+1)/2
+  //if (target<0) {target=0}
+  //if (target>10) {target=10}
+
+  chartElem.dataset.value = target*100
+  console.log("target tanh= ", target);
   console.log("value=",chartElem.dataset.value);
   var containers = document.getElementsByClassName("chart");
   var dial = new Dial(containers[0]);

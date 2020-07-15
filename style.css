@@ -12,7 +12,9 @@ html {
   font-size: 40px;
   color: black;
   border-radius: 30px;
+  text-align: center;
 }
+
 
 button.btn {
   font-family: 'Roboto Condensed', sans-serif;
@@ -46,7 +48,7 @@ div.container {
 }
 div.card {
   margin: 20px 10px;
-  background: #e6ffff;//fff0e6;
+  background: #e6ffff;//#E8E5EF;////fff0e6;
   border-radius: 30px
 }
 
@@ -57,14 +59,7 @@ p {
   background: #fff0e6;
   border-radius: 30px
 }
-/*
-body {
-	background: #18222f;
-}
 
-
-
-*/
 img {
   display: block;
   max-width: 100%;
