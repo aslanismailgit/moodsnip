@@ -1,3 +1,4 @@
+// not in use
 var pics_div = document.getElementById("pics");
 pics_div.style.display = "none";
 
@@ -10,6 +11,5 @@ function bringPics(e){
   e.preventDefault();
   console.log("bringing pics");
   pics_Src.src="https://source.unsplash.com/1600x900/?happiness"
-
 
 }

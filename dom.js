@@ -17,12 +17,12 @@ play_Again.addEventListener('click', playAgain);
 
 
 if (language=="tr") {
-  console.log("türkçe");
+  //console.log("türkçe");
   data = data_tr;
   change2turkish()
 }
-if (language=="en") {
-  console.log("english");
+else  { //(language=="en")
+  //console.log("english");
   data = data_en
 }
 
@@ -34,7 +34,7 @@ function change2turkish(){
   Here.innerText = "İşte sonuçlar"
   YouAre.innerText = "Bugün"
   posit.innerText = "pozitifsiniz"
-  console.log("changed to turkish");
+  //console.log("changed to turkish");
 }
 
  //works IE/SAFARI/CHROME/FF
@@ -98,9 +98,7 @@ max = lengthOfDictionary-1;
 for (var i = 0; i < numberOfIter*4; i++) {
   randomInt = randomInteger(min, max)
   randomWordsIndex[i] = randomInt
-  // console.log("random number=", i,randomInt);
 }
-// console.log("Random word Index -->", randomWordsIndex);
 
 /*-------------------------------------------------*/
 function assign_words(){
@@ -145,9 +143,9 @@ function showResults(){
       totalPositiveScore = totalPositiveScore + data[randomWordsIndex[i]]["positiveScore"]
       totalNegativeScore = totalNegativeScore + data[randomWordsIndex[i]]["negativeScore"]
 
-      console.log("PositiveScore", data[randomWordsIndex[i]]["Word"]);
-      console.log("PositiveScore", data[randomWordsIndex[i]]["positiveScore"]);
-      console.log("NegativeScore", data[randomWordsIndex[i]]["negativeScore"]);
+      //console.log("PositiveScore", data[randomWordsIndex[i]]["Word"]);
+      //console.log("PositiveScore", data[randomWordsIndex[i]]["positiveScore"]);
+      //console.log("NegativeScore", data[randomWordsIndex[i]]["negativeScore"]);
 
       //console.log("totalPositiveScore",totalPositiveScore);
       //console.log("totalNegativeScore",totalNegativeScore);
@@ -155,7 +153,7 @@ function showResults(){
   }
   target = (totalPositiveScore - totalNegativeScore)/numberOfIter
 
-  console.log("target = ", target);
+  //console.log("target = ", target);
   /* std = 1 so 3*std for each score  to move values beyond 0
   target = (target) + (2 * 3*0.7) */
 
@@ -164,8 +162,8 @@ function showResults(){
   //if (target>10) {target=10}
 
   chartElem.dataset.value = target*100
-  console.log("target tanh= ", target);
-  console.log("value=",chartElem.dataset.value);
+  //console.log("target tanh= ", target);
+  //console.log("value=",chartElem.dataset.value);
   var containers = document.getElementsByClassName("chart");
   var dial = new Dial(containers[0]);
   dial.animateStart();
@@ -192,7 +190,7 @@ function playAgain() {
 /*-------------------------------------------------*/
 function runSelectWord_1(e){
   e.preventDefault();
-  console.log(start);
+  //console.log(start);
   index_temp = 0
   index_ary[index_temp + ((start-1) * 4)] = 1
   assign_words()
