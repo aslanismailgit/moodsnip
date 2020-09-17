@@ -1,2 +1,2 @@
 # moodsnip
-Moodsnip is a NLP project. 
+Moodsnip is an NLP project. 
