@@ -7,3 +7,8 @@ https://medium.com/@ismailaslan1/can-artificial-intelligence-detect-your-mood-55
 ## Please follow below link to test it.
 
 http://htmlpreview.github.io/?https://github.com/aslanismailgit/moodsnip/blob/master/index.html
+
+
+![alt text](https://github.com/aslanismailgit/moodsnip/blob/master/images/home.png)
+
+![alt text](https://github.com/aslanismailgit/moodsnip/blob/master/images/result.png)
